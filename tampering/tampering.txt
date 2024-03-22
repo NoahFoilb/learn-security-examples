@@ -1,0 +1,5 @@
+The vulnerability originates from transmitting the "name" property in the request as an unsanitized string, exposing it to cross-site scripting (XSS) attacks. 
+This vulnerability permits attackers to alter the input, potentially endangering the system's security. 
+The secure version addresses this issue by cleansing all received properties and variables in the request, thus obstructing any unauthorized alterations.
+
+Tampering infringes upon the Integrity aspect of the CIA (Confidentiality, Integrity, Availability) model.
