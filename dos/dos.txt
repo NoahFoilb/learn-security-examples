@@ -1,2 +1,5 @@
 - Briefly explain the vulnerability and why the secure version prevents the vulnerability.
 - What additional security mechanisms can you incorporate to prevent such attacks?
+
+
+The flaw arises from the inability to process input that can cause the server to fail. This opens the door for a Denial of Service (DoS) attack, where the attacker floods the server with input until it encounters data that triggers a crash. In a secure setup, problematic input is managed using a try/catch block, which prevents the server from crashing and ensures it remains available, adhering to the principle of Availability. To bolster defenses against such threats, it's crucial to sanitize and validate user input. Additionally, the system remains at risk if it cannot handle a high volume of requests or manage complex queries efficiently, which may lead to performance degradation. These vulnerabilities can be mitigated by implementing rate limiting and utilizing a Content Delivery Network (CDN) to distribute the load.
