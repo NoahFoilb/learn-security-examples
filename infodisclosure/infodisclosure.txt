@@ -1,3 +1,5 @@
 Briefly explain the vulnerability and why the secure version prevents the vulnerability.
 Which CIA property does tampering violate?
 What additional security mechanisms can you incorporate?
+
+The vulnerability stems from incorporating user-supplied data directly into database queries without prior sanitization. This approach exposes the application to potential SQL injection attacks, which could reveal usernames and passwords. Such information disclosure breaches the principle of Confidentiality by making data accessible to unauthorized parties. To enhance security, it is advisable to avoid using user inputs in queries directly. Instead, inputs should be thoroughly sanitized to confirm they are safe and cannot be used to access sensitive information.
